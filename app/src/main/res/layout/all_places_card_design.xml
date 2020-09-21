@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:id="@+id/all_place_card"
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+
+        <ImageView
+            android:id="@+id/all_place_image"
+            android:layout_width="126dp"
+            android:layout_height="170dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mcdonald_img" />
+
+        <TextView
+            android:id="@+id/all_place_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General Store"
+            android:layout_toRightOf="@id/all_place_image"
+            android:layout_marginLeft="20dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"
+            android:lineHeight="20dp"
+            android:fontFamily="@font/brandon_grotesque_black"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/all_place_image" />
+
+        <RatingBar
+            android:id="@+id/all_place_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_below="@id/all_place_title"
+            android:layout_toRightOf="@id/all_place_image"
+            android:layout_marginLeft="10dp"
+            android:rating="4"/>
+
+        <TextView
+            android:id="@+id/all_place_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/all_place_rating"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/all_place_image"
+            android:padding="10dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

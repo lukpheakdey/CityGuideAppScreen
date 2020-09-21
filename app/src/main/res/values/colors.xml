@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="colorPrimary">#ffe400</color>-->
+<!--    <color name="colorPrimaryDark">#ffa600</color>-->
+<!--    <color name="colorAccent">#272727</color>-->
+    <color name="transparent">#00ffffff</color>
+
+    <color name="colorPrimary">#947AE8</color>
+    <color name="colorPrimaryDark">#3B90DB</color>
+    <color name="colorAccent">#272727</color>
+
+    <color name="lightWhite">#f2f5f8</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="black_light">#454343</color>
+
+    <!--  Body and background Colors  -->
+    <color name="home_background">#f2f5f8</color>
+    <color name="banner_background">#F1E9CE</color>
+    <color name="banner_background_light">#56F1E9CE</color>
+
+    <!--  Card Colors  -->
+    <color name="card1">#d4cbe5</color>
+    <color name="card2">#7adccf</color>
+    <color name="card3">#f7c59f</color>
+    <color name="card4">#b8d7f5</color>
+
+    <color name="red_light">#D15B5F</color>
+
+</resources>

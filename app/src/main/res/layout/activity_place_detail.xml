@@ -57,6 +57,8 @@ xmlns:android="http://schemas.android.com/apk/res/android">
             android:layout_marginTop="15dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:orientation="horizontal">
 
             <ImageView
@@ -70,6 +72,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:paddingTop="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -77,13 +80,6 @@ xmlns:android="http://schemas.android.com/apk/res/android">
                     android:layout_height="wrap_content"
                     android:text="Direction"
                     android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/place_detail_location"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="Location_detail" />
             </LinearLayout>
         </LinearLayout>
 
@@ -174,6 +170,8 @@ xmlns:android="http://schemas.android.com/apk/res/android">
             android:layout_marginTop="15dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:orientation="horizontal">
 
             <ImageView
@@ -204,6 +202,88 @@ xmlns:android="http://schemas.android.com/apk/res/android">
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Website -->
+        <LinearLayout
+            android:id="@+id/detail_website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_phone"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_web"
+                android:contentDescription="TODO" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Website"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/place_detail_website"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Website" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Review -->
+        <LinearLayout
+            android:id="@+id/detail_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_website"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_review"
+                android:contentDescription="TODO" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Review"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/place_detail_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Review" />
+            </LinearLayout>
+        </LinearLayout>
 
 
 

@@ -30,6 +30,7 @@ data class Place(
     val day_close: String,
     val image_url: String,
     val map_url: String,
+    val website: String,
     val review: String,
     val category_id: Int?
 ) : Parcelable

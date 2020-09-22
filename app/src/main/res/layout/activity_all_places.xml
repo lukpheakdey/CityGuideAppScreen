@@ -49,6 +49,15 @@
 
 <!--    </LinearLayout>-->
 
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/action_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@null" />
+
     <LinearLayout
       android:orientation="vertical"
       android:layout_marginLeft="10dp"

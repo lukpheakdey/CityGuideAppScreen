@@ -82,10 +82,10 @@ class LoginActivity : AppCompatActivity() {
             val category2 = Categories(0, name2, desc2, image2, color2)
             val category3 = Categories(0, name3, desc3, image3, color3)
             val category4 = Categories(0, name4, desc4, image4, color4)
-            mCategoriesViewModel.addCategory(category)
-            mCategoriesViewModel.addCategory(category1)
-            mCategoriesViewModel.addCategory(category2)
-            mCategoriesViewModel.addCategory(category3)
+           // mCategoriesViewModel.addCategory(category)
+            //mCategoriesViewModel.addCategory(category1)
+//            mCategoriesViewModel.addCategory(category2)
+ //           mCategoriesViewModel.addCategory(category3)
             mCategoriesViewModel.addCategory(category4)
             Toast.makeText(this, "Create category!!!!", Toast.LENGTH_SHORT).show()
         }
@@ -104,6 +104,7 @@ class LoginActivity : AppCompatActivity() {
             val day_close = "No"
             val image_url = "https://i.ibb.co/HGmnmL1/mcdonald.jpg"
             val map_url = "https://www.google.com/maps/dir/38.6393081,-77.320955/McDonald+near+me/@38.6401115,-77.3500566,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89b657cc249ed649:0x23210dc580bc83e1!2m2!1d-77.3375056!2d38.6445961"
+            val website = "https://www.mcdonalds.com/"
             val review = "Nice place have lunch with family"
             val category_id = 1
             val place = Place(
@@ -120,6 +121,7 @@ class LoginActivity : AppCompatActivity() {
                 day_close,
                 image_url,
                 map_url,
+                website,
                 review,
                 category_id
             )
@@ -136,6 +138,7 @@ class LoginActivity : AppCompatActivity() {
             val day_close1 = "No"
             val image_url1 = "https://i.ibb.co/r7CYDc2/steak-house.jpg"
             val map_url1 = "https://www.google.com/maps/dir/38.6393081,-77.320955/steakhouse+near+me/@38.6330782,-77.3280787,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89b6561ad2c74503:0x9d000bae9df4046!2m2!1d-77.2979998!2d38.6357587"
+            val website1 = "https://www.outback.com/"
             val review1 = "The good steak for us"
             val category_id1 = 1
             val place1 = Place(
@@ -152,6 +155,7 @@ class LoginActivity : AppCompatActivity() {
                 day_close1,
                 image_url1,
                 map_url1,
+                website1,
                 review1,
                 category_id1
             )
@@ -168,6 +172,7 @@ class LoginActivity : AppCompatActivity() {
             val day_close3 = "No"
             val image_url3 = "https://i.ibb.co/1QKBS5j/sushi.jpg"
             val map_url3 = "https://www.google.com/maps/dir//sushi+near+me/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89b656ef1169f45d:0xaa143da775b6957f?sa=X&ved=2ahUKEwiNrqikw-7rAhVCmXIEHWhnANAQ9RcwAHoECA0QBQ"
+            val website3 = "http://www.sushibae.com/menu"
             val review3 = "Best japanese food "
             val category_id3 = 1
             val place3 = Place(
@@ -184,6 +189,7 @@ class LoginActivity : AppCompatActivity() {
                 day_close3,
                 image_url3,
                 map_url3,
+                website3,
                 review3,
                 category_id3
             )
@@ -200,6 +206,7 @@ class LoginActivity : AppCompatActivity() {
             val day_close4 = "No"
             val image_url4 = "https://i.ibb.co/PmxQJG1/enterprise-car-rental.png"
             val map_url4 = "https://www.google.com/maps/dir//car+rent+near+me/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89b6561d37fab6a7:0x649bc5df855839d1?sa=X&ved=2ahUKEwjmvJfow-7rAhX-oXIEHbD9BV0Q9RcwAHoECAkQBA"
+            val website4 = "https://www.enterprise.com/"
             val review4 = "Good for rental car"
             val category_id4 = 2
             val place4 = Place(
@@ -216,6 +223,7 @@ class LoginActivity : AppCompatActivity() {
                 day_close4,
                 image_url4,
                 map_url4,
+                website4,
                 review4,
                 category_id4
             )
@@ -232,6 +240,7 @@ class LoginActivity : AppCompatActivity() {
             val day_close5 = "No"
             val image_url5 = "https://i.ibb.co/FnqG3jF/Next-car-rental.png"
             val map_url5 = "https://www.google.com/maps/dir//car+rent+near+me/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89b6561d37fab6a7:0x649bc5df855839d1?sa=X&ved=2ahUKEwje3tTzxO7rAhUHg3IEHTv5BwYQ9RcwAHoECAQQBA"
+            val website5 = "https://nextcarrental.com/"
             val review5 = "Good for rental car"
             val category_id5 = 2
             val place5 = Place(
@@ -248,6 +257,7 @@ class LoginActivity : AppCompatActivity() {
                 day_close5,
                 image_url5,
                 map_url5,
+                website5,
                 review5,
                 category_id5
             )
@@ -264,6 +274,7 @@ class LoginActivity : AppCompatActivity() {
             val day_close6 = "No"
             val image_url6 = "https://i.ibb.co/LxyRsMT/rental-car.jpg"
             val map_url6 = "https://www.google.com/maps/dir//car+rent+near+me/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89b7ad58e5d1aff5:0x400cd3444ad381b2?sa=X&ved=2ahUKEwjW2paXxe7rAhVAlnIEHSx6Dc8Q9RcwAHoECAkQBA"
+            val website6 = "https://www.avis.com/"
             val review6 = "Good for rental car"
             val category_id6 = 2
             val place6 = Place(
@@ -280,6 +291,7 @@ class LoginActivity : AppCompatActivity() {
                 day_close6,
                 image_url6,
                 map_url6,
+                website6,
                 review6,
                 category_id6
             )
@@ -296,6 +308,7 @@ class LoginActivity : AppCompatActivity() {
             val day_close7 = "No"
             val image_url7 = "https://i.ibb.co/JR6Td9x/best-western-hotel.jpg"
             val map_url7 = "https://www.google.com/maps?gl=US&hl=en&um=1&ie=UTF-8&fb=1&sa=X&geocode=KTOGji8FVraJMRwNJJVINOjV&daddr=Best+Western+Potomac+Mills,+14619+Potomac+Mills+Rd,+Woodbridge,+VA+22192"
+            val website7 = "https://www.bestwestern.com/"
             val review7 = "Part of the Potomac Mills shopping mall, this unpretentious hotel off I-95 is 5 miles from Occoquan Bay National Wildlife Refuge and 9 miles from the National Museum of the Marine Corps."
             val category_id7 = 3
             val place7 = Place(
@@ -312,40 +325,9 @@ class LoginActivity : AppCompatActivity() {
                 day_close7,
                 image_url7,
                 map_url7,
+                website7,
                 review7,
                 category_id7
-            )
-
-            val place_name8= "Best Western Potomac Mills"
-            val place_desc8 = "Modest hotel with complimentary breakfast & parking, plus an outdoor pool & a fitness center."
-            val phone8 = "(703) 494-4433"
-            val address8 = "14619 Potomac Mills Rd, Woodbridge, VA 22192"
-            val star_point8 = "3.9"
-            val feature8 = 1
-            val open_time8 = "24Hour"
-            val close_time8 = "No"
-            val day_open8 = "7day"
-            val day_close8 = "No"
-            val image_url8 = "https://i.ibb.co/JR6Td9x/best-western-hotel.jpg"
-            val map_url8 = "https://www.google.com/maps?gl=US&hl=en&um=1&ie=UTF-8&fb=1&sa=X&geocode=KTOGji8FVraJMRwNJJVINOjV&daddr=Best+Western+Potomac+Mills,+14619+Potomac+Mills+Rd,+Woodbridge,+VA+22192"
-            val review8 = "Part of the Potomac Mills shopping mall, this unpretentious hotel off I-95 is 5 miles from Occoquan Bay National Wildlife Refuge and 9 miles from the National Museum of the Marine Corps."
-            val category_id8 = 3
-            val place8 = Place(
-                0,
-                place_name8,
-                place_desc8,
-                phone8,
-                address8,
-                star_point8,
-                feature8,
-                open_time8,
-                close_time8,
-                day_open8,
-                day_close8,
-                image_url8,
-                map_url8,
-                review8,
-                category_id8
             )
 
             val place_name9 = "Hilton Garden Inn"
@@ -360,6 +342,7 @@ class LoginActivity : AppCompatActivity() {
             val day_close9 = "No"
             val image_url9 = "https://i.ibb.co/9t1MLP0/hilton-garden.jpg"
             val map_url9 = "https://www.google.com/maps?gl=US&hl=en&um=1&ie=UTF-8&fb=1&sa=X&geocode=KS3Ya9m0-LaJMX_vnSe1FotW&daddr=Hilton+Garden+Inn+Woodbridge,+VA,+2500+Neabsco+Common+Pl,+Woodbridge,+VA+22191"
+            val website9 = "https://www.hilton.com/en/"
             val review9 = "In a commercial area off Interstate 95, this unassuming hotel is 5 miles from Leesylvania State Park and 2 miles from Potomac Mills Mal"
             val category_id9 = 3
             val place9 = Place(
@@ -376,6 +359,7 @@ class LoginActivity : AppCompatActivity() {
                 day_close9,
                 image_url9,
                 map_url9,
+                website9,
                 review9,
                 category_id9
             )
@@ -392,6 +376,7 @@ class LoginActivity : AppCompatActivity() {
             val day_close10 = "No"
             val image_url10 = "https://i.ibb.co/Hzd3NYs/Potomac-Mills.jpg"
             val map_url10 = "https://www.google.com/maps/dir//mall+near+me/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89b6560c434b0b95:0xf02d45fbb1ae48bc?sa=X&ved=2ahUKEwjqg_jEx-7rAhUVmXIEHUGLCiIQ9RcwAHoECBQQBQ"
+            val website10 = "https://www.simon.com/mall/potomac-mills"
             val review10 = "Shopping mall"
             val category_id10 = 5
             val place10 = Place(
@@ -408,6 +393,7 @@ class LoginActivity : AppCompatActivity() {
                 day_close10,
                 image_url10,
                 map_url10,
+                website10,
                 review10,
                 category_id10
             )
@@ -424,6 +410,7 @@ class LoginActivity : AppCompatActivity() {
             val day_close11 = "No"
             val image_url11 = "https://i.ibb.co/7r7vxbz/nike-store.jpg"
             val map_url11 = "https://www.google.com/maps/dir//mall+near+me/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89b657f4a7159fdf:0x268d8b9e29156baf?sa=X&ved=2ahUKEwj2l6yYyO7rAhUGl3IEHa6AD7EQ9RcwAHoECAcQAw"
+            val website11 = "https://www.nike.com/"
             val review11 = "Nike shoe store"
             val category_id11 = 5
             val place11 = Place(
@@ -440,6 +427,7 @@ class LoginActivity : AppCompatActivity() {
                 day_close11,
                 image_url11,
                 map_url11,
+                website11,
                 review11,
                 category_id11
             )
@@ -456,6 +444,7 @@ class LoginActivity : AppCompatActivity() {
             val day_close12 = "No"
             val image_url12 = "https://i.ibb.co/FwzXJsh/AMC0.jpg"
             val map_url12 = "https://www.google.com/maps?q=AMC+Potomac+Mills+18&um=1&ie=UTF-8&sa=X&ved=2ahUKEwipitavye7rAhXSoHIEHbWADRQQ_AUoAXoECCIQAw"
+            val website12 = "https://www.amctheatres.com/"
             val review12 = "Everyone wearing masks and socially distancing."
             val category_id12 = 5
             val place12 = Place(
@@ -472,10 +461,10 @@ class LoginActivity : AppCompatActivity() {
                 day_close12,
                 image_url12,
                 map_url12,
+                website12,
                 review12,
                 category_id12
             )
-
             mPlaceViewModel.addPlace(place)
             mPlaceViewModel.addPlace(place1)
             mPlaceViewModel.addPlace(place3)
@@ -483,7 +472,6 @@ class LoginActivity : AppCompatActivity() {
             mPlaceViewModel.addPlace(place5)
             mPlaceViewModel.addPlace(place6)
             mPlaceViewModel.addPlace(place7)
-            mPlaceViewModel.addPlace(place8)
             mPlaceViewModel.addPlace(place9)
             mPlaceViewModel.addPlace(place10)
             mPlaceViewModel.addPlace(place11)

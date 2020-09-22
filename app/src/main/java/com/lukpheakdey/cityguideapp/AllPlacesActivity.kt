@@ -3,6 +3,7 @@ package com.lukpheakdey.cityguideapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lukpheakdey.cityguideapp.adapter.AllPlacesAdapter
@@ -37,6 +38,7 @@ class AllPlacesActivity : AppCompatActivity() {
             placeList = ArrayList()
             allPlaceRecycler()
         }
+
 
     }
 

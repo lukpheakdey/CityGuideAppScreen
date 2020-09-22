@@ -1,7 +1,9 @@
 package com.lukpheakdey.cityguideapp
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_place_detail.*
 
@@ -22,6 +24,8 @@ class PlaceDetailActivity : AppCompatActivity() {
         val map_url = intent.getStringExtra("MAP_URL")
         val image_url = intent.getStringExtra("IMAGE_URL")
         val open_day = "Open : ${open_time} | Close: ${close_time} | Day Open: ${day_open} | Day Close: ${day_close}"
+        val website = intent.getStringExtra("WEBSITE")
+        val review = intent.getStringExtra("REVIEW")
 
         place_detail_title.text = name.toString()
         all_place_rating.rating = star.toFloat()
@@ -29,6 +33,26 @@ class PlaceDetailActivity : AppCompatActivity() {
         place_detail_desc.text = desc.toString()
         place_detail_phone.text = phone.toString()
         place_detail_hour_open.text = open_day.toString()
+        place_detail_website.text = website.toString()
+        place_detail_review.text = review.toString()
         Glide.with(this).load(image_url.toString()).into(place_detail_image)
+
+        detail_phone.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL);
+            intent.data = Uri.parse("tel:$phone")
+            startActivity(intent)
+        }
+
+        detail_website.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(website.toString()))
+            startActivity(browserIntent)
+        }
+
+        detail_map.setOnClickListener {
+            val mapUri = Uri.parse("geo:0,0?q=" + Uri.encode(address))
+            val mapIntent = Intent(Intent.ACTION_VIEW, mapUri)
+            mapIntent.setPackage("com.google.android.apps.maps")
+            startActivity(mapIntent)
+        }
     }
 }

@@ -12,6 +12,8 @@ import com.lukpheakdey.cityguideapp.PlaceDetailActivity
 import com.lukpheakdey.cityguideapp.model.Place
 import com.lukpheakdey.cityguideapp.R
 import kotlinx.android.synthetic.main.all_places_card_design.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 //import kotlinx.android.synthetic.main.all_places_card_design.view.*
 
@@ -54,6 +56,8 @@ class AllPlacesAdapter: RecyclerView.Adapter<AllPlacesAdapter.MyViewHolder>() {
             intent.putExtra("DAY_CLOSE", currentItem.day_close)
             intent.putExtra("IMAGE_URL", currentItem.image_url)
             intent.putExtra("MAP_URL", currentItem.map_url)
+            intent.putExtra("WEBSITE", currentItem.website)
+            intent.putExtra("REVIEW", currentItem.review)
             holder.itemView.context.startActivity(intent)
             Toast.makeText(holder.itemView.context, holder.itemView.all_place_title.text.toString(), Toast.LENGTH_SHORT).show()
         }

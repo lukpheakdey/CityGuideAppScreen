@@ -52,7 +52,7 @@ class LoginActivity : AppCompatActivity() {
 
         //simple to create category
         btn_create_category.setOnClickListener {
-            val name = "Reaturant "
+            val name = "Reaturant"
             val desc = "Restaurant place have to go for eatting"
             val image = "restaurant_image"
             val color = "#d4cbe5"

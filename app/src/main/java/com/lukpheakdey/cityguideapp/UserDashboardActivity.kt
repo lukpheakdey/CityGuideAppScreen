@@ -172,6 +172,21 @@ class UserDashboardActivity : AppCompatActivity(), NavigationView.OnNavigationIt
                 var i = Intent(applicationContext, AllPlacesActivity::class.java)
                 startActivity(i)
             }
+            R.id.nav_restaurants ->{
+                intentActionGo(1)
+            }
+            R.id.nav_car_rent ->{
+                intentActionGo(2)
+            }
+            R.id.nav_hotel ->{
+                intentActionGo(3)
+            }
+            R.id.nav_education ->{
+                intentActionGo(4)
+            }
+            R.id.nav_shop ->{
+                intentActionGo(5)
+            }
         }
         return true
     }
@@ -212,7 +227,13 @@ class UserDashboardActivity : AppCompatActivity(), NavigationView.OnNavigationIt
         mCategoriesViewModel.readAllDataCategory.observe(this, Observer { category ->
             adapter.setData(category)
         })
+    }
 
+    fun intentActionGo(categoryId: Int) {
+        var intent = Intent(applicationContext, AllPlacesActivity::class.java)
+        intent.putExtra("CALL_FROM_CATEGORY", "call_from_category")
+        intent.putExtra("CATEOGRY_ID", categoryId)
+        startActivity(intent)
     }
 
 }

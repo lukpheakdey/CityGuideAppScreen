@@ -56,8 +56,12 @@
                     android:title="@string/restaurants"
                     android:icon="@drawable/restaurant_icon"/>
                 <item
-                    android:id="@+id/nav_bank"
-                    android:title="@string/banks"
+                    android:id="@+id/nav_car_rent"
+                    android:title="@string/car_rent"
+                    android:icon="@drawable/car_icon"/>
+                <item
+                    android:id="@+id/nav_hotel"
+                    android:title="@string/hotels"
                     android:icon="@drawable/bank_icon"/>
                 <item
                     android:id="@+id/nav_education"

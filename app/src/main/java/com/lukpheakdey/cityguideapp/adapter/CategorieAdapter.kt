@@ -91,20 +91,18 @@ class CategorieAdapter: RecyclerView.Adapter<CategorieAdapter.MyViewHolder>() {
         holder.itemView.background_gradient.setBackgroundColor(Color.parseColor(currentItem.color.toString()))
         var image = currentItem.image.toString()
 
-        /*
-        if(image == "hospital_image"){
-            holder.itemView.categories_image.setImageResource(R.drawable.hospital_image)
-        } else if(image == "restaurant_image"){
+        if(image == "restaurant_image"){
             holder.itemView.categories_image.setImageResource(R.drawable.restaurant_image)
         } else if(image == "transport_image"){
             holder.itemView.categories_image.setImageResource(R.drawable.transport_image)
         } else if(image == "shopping_image"){
-            holder.itemView.categories_image.setImageResource(R.drawable.restaurant_image)
-        }*/
-
-        if(image == "hospital_image"){
-            holder.itemView.categories_image.setImageResource(R.drawable.hospital_image)
-        } else {
+            holder.itemView.categories_image.setImageResource(R.drawable.shopping_image)
+        } else if(image == "school_image"){
+            holder.itemView.categories_image.setImageResource(R.drawable.school_image)
+        } else if(image == "vlog"){
+            holder.itemView.categories_image.setImageResource(R.drawable.vlog)
+        }
+        else {
             val urlImage = "https://i.ibb.co/vL9NP6X/transport-image.png"
             //Glide.with(context).load(urlImage).centerCrop().into(holder.itemView.categories_image)
             Glide.with(holder.itemView.context).load(urlImage).into(holder.itemView.categories_image)
@@ -124,7 +122,6 @@ class CategorieAdapter: RecyclerView.Adapter<CategorieAdapter.MyViewHolder>() {
             intent.putExtra("CATEOGRY_ID", categoryId)
             holder.itemView.context.startActivity(intent)
         }
-
 
     }
 

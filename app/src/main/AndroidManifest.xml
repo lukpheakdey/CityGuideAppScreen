@@ -11,26 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.lukpheakdey.cityguideapp.PlaceDetailActivity"></activity>
+        <activity android:name=".webview.ECommerceActivity"></activity>
+        <activity android:name=".PlaceDetailActivity" />
         <activity
-            android:name="com.lukpheakdey.cityguideapp.AllPlacesActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.Bridge"></activity>
+            android:name=".AllPlacesActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.Bridge" />
         <activity android:name="LoginSignup.SignUpActivity" />
         <activity android:name="LoginSignup.LoginActivity" />
         <activity
             android:name="LoginSignup.StartUpScreenActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name="com.lukpheakdey.cityguideapp.AllCateogriesActivity"
+            android:name=".AllCateogriesActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name="com.lukpheakdey.cityguideapp.UserDashboardActivity"
+            android:name=".UserDashboardActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name="com.lukpheakdey.cityguideapp.OnBoardingActivity"
+            android:name=".OnBoardingActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name="com.lukpheakdey.cityguideapp.SplashScreenActivity"
+            android:name=".SplashScreenActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

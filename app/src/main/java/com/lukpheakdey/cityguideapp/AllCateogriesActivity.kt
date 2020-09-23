@@ -16,6 +16,7 @@ class AllCateogriesActivity : AppCompatActivity() {
             startActivity(i)
         }
 
+        // example
         press_restaurant.setOnClickListener {
             intentActionGo(1)
         }

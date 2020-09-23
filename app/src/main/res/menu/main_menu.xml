@@ -7,24 +7,14 @@
             android:title="@string/home"
             android:icon="@drawable/menu_dashboard_icon"/>
         <item
-            android:id="@+id/nav_search"
-            android:title="@string/search"
-            android:icon="@drawable/menu_search_icon"/>
-        <item
             android:id="@+id/nav_all_categories"
             android:title="@string/all_categories"
             android:icon="@drawable/menu_categories_icon"/>
-
         <item
             android:id="@+id/nav_all_places"
             android:title="@string/all_places"
             android:icon="@drawable/menu_place_icon"/>
-        <item
-            android:id="@+id/nav_add_missing_place"
-            android:title="@string/add_missing_place"
-            android:icon="@drawable/menu_add_missing_place_icon"/>
     </group>
-
 
     <item android:title="Profile">
         <menu>
@@ -41,6 +31,7 @@
                 <item
                     android:id="@+id/nav_logout"
                     android:title="@string/logout"
+                    android:visible="true"
                     android:icon="@drawable/menu_logout_icon"/>
             </group>
 
@@ -76,6 +67,25 @@
         </menu>
     </item>
 
+    <item android:title="Provider">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_onlineshopping"
+                    android:title="@string/e_commerce"
+                    android:icon="@drawable/icon_shopping"/>
+                <item
+                    android:id="@+id/nav_taxi"
+                    android:title="@string/taxi"
+                    android:icon="@drawable/icon_taxi"/>
+                <item
+                    android:id="@+id/nav_deliver"
+                    android:title="@string/food_delivery"
+                    android:icon="@drawable/icon_food_delivery"/>
+            </group>
+        </menu>
+    </item>
+
     <item android:title="Share">
         <menu>
 
@@ -88,6 +98,19 @@
                     android:id="@+id/nav_rate_us"
                     android:title="@string/rate_us"
                     android:icon="@drawable/menu_rate_us_icon"/>
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="Script">
+        <menu>
+
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/nav_script"
+                    android:title="@string/script"
+                    android:icon="@drawable/icon_script"/>
             </group>
 
         </menu>

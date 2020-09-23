@@ -3,9 +3,12 @@ package com.lukpheakdey.cityguideapp
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import kotlinx.android.synthetic.main.activity_all_cateogries.*
 import kotlinx.android.synthetic.main.activity_place_detail.*
+import kotlinx.android.synthetic.main.activity_place_detail.back_pressed
 
 class PlaceDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +39,11 @@ class PlaceDetailActivity : AppCompatActivity() {
         place_detail_website.text = website.toString()
         place_detail_review.text = review.toString()
         Glide.with(this).load(image_url.toString()).into(place_detail_image)
+
+        //back_pressed.setVisibility(View.VISIBLE)
+        back_pressed.setOnClickListener {
+            super.onBackPressed()
+        }
 
         detail_phone.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL);

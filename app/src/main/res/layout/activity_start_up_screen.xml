@@ -15,7 +15,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/retailer_circle_black" />
+            android:src="@drawable/circle_black" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/brandon_grotesque_black"
-            android:text="@string/retailer_heading"
+            android:text="@string/heading"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/black"
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/brandon_grotesque_light"
-            android:text="@string/retailer_tag_line"
+            android:text="@string/tag_line"
             android:textAlignment="center"
             android:textColor="@color/black" />
 
@@ -55,6 +55,7 @@
                 android:text="@string/login"
                 android:onClick="callLoginScreen"
                 android:textColor="@color/black"
+                android:visibility="visible"
                 android:transitionName="transition_login"
                 tools:ignore="ButtonStyle" />
 
@@ -70,17 +71,20 @@
                 android:onClick="callSignupScreen"
                 android:textColor="@color/black"
                 tools:ignore="ButtonStyle"
+                android:visibility="visible"
                 android:transitionName="transition_signup"/>
 
         </LinearLayout>
 
         <Button
+            android:id="@+id/login_out_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="#00000000"
-            android:text="@string/how_we_work"
-            android:textColor="@color/black" />
+            android:background="@color/red_light"
+            android:text="@string/logout"
+            android:visibility="visible"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 

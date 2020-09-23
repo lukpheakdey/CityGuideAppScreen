@@ -39,4 +39,8 @@ class PlaceViewModel(application: Application): AndroidViewModel(application) {
         return repository.readAllPlaceByCategory(categoryId)
     }
 
+    fun searchPlace(search: String) : LiveData<List<Place>> {
+        return repository.searchPlace(search)
+    }
+
 }

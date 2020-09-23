@@ -35,6 +35,7 @@ class AllPlacesAdapter: RecyclerView.Adapter<AllPlacesAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: AllPlacesAdapter.MyViewHolder, position: Int) {
+
         val currentItem = placeList[position]
         holder.itemView.all_place_title.text = currentItem.place_name.toString()
         holder.itemView.all_place_desc.text = currentItem.place_desc.toString()
@@ -61,7 +62,6 @@ class AllPlacesAdapter: RecyclerView.Adapter<AllPlacesAdapter.MyViewHolder>() {
             holder.itemView.context.startActivity(intent)
             Toast.makeText(holder.itemView.context, holder.itemView.all_place_title.text.toString(), Toast.LENGTH_SHORT).show()
         }
-
     }
 
     override fun getItemCount(): Int {

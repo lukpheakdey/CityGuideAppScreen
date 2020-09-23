@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MySplashScreen</string>
+    <string name="app_name">City Guide</string>
     <string name="power_by">Pheakdey Luk</string>
     <string name="slogan_name">Everything your city holds!</string>
     <string name="logo_name">Get A Way</string>
@@ -14,6 +14,11 @@
     <string name="logout">Logout</string>
     <string name="share">Share</string>
     <string name="rate_us">Rate Us</string>
+    <string name="e_commerce">Shopping E-commerce </string>
+    <string name="script">Run Script </string>
+    <string name="food_delivery">Food Delivery </string>
+    <string name="taxi">Taxi </string>
+
 
     <!--     All Categories Menu names     -->
     <string name="expand_all">Expand All</string>
@@ -71,8 +76,8 @@
 
     <!--  General Strings  -->
     <string name="sign_up">Sign Up</string>
-    <string name="retailer_heading">Grow\nYour Business</string>
-    <string name="retailer_tag_line">We will help you to grow your business using online services!</string>
+    <string name="heading">Enjoy\nTraveling</string>
+    <string name="tag_line">Provider the best location</string>
     <string name="create_account">Create\nAccount</string>
     <string name="how_we_work">How we work?</string>
     <string name="remember_me">Remember Me</string>
@@ -90,5 +95,7 @@
     values-round/strings.xml for round devices.
     -->
     <string name="hello_world">Hello Square World!</string>
+
+    <string name="personal">  Contact </string>
 
 </resources>

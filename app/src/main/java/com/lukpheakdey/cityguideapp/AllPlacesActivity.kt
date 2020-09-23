@@ -3,7 +3,10 @@ package com.lukpheakdey.cityguideapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lukpheakdey.cityguideapp.adapter.AllPlacesAdapter
@@ -26,11 +29,17 @@ class AllPlacesActivity : AppCompatActivity() {
         var intent_extra : String? = ""
         intent_extra = intent.getStringExtra("CALL_FROM_CATEGORY")
 
+        var intent_search : String? = ""
+        intent_search = intent.getStringExtra("CALL_FOR_SEARCH")
+
         // Call all place based on category id
         if(intent_extra!=null){
             val categoryId = intent.getIntExtra("CATEOGRY_ID", 0)
             readAllPlaceByCateogry(categoryId)
             //Toast.makeText(this, "Call from category", Toast.LENGTH_LONG).show()
+        } else if(intent_search!=null){
+            val search_data = intent.getStringExtra("SEARCH_DATA")
+            searchPlaceToVisit(search_data)
         }
         // Call all place to visit
         else {
@@ -39,6 +48,9 @@ class AllPlacesActivity : AppCompatActivity() {
             allPlaceRecycler()
         }
 
+        back_pressed.setOnClickListener {
+            super.onBackPressed()
+        }
 
     }
 
@@ -53,6 +65,26 @@ class AllPlacesActivity : AppCompatActivity() {
         mPlaceViewModel = ViewModelProvider(this).get(PlaceViewModel::class.java)
         mPlaceViewModel.readAllDataPlace.observe(this, Observer {place ->
             adapter.setData(place)
+        })
+    }
+
+    // Search Place
+    fun searchPlaceToVisit(searchData: String) {
+        // RecylerView
+        val adapter = AllPlacesAdapter()
+        all_places_recycler.adapter = adapter
+        all_places_recycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
+        // PlaceViewModel to read all places
+        mPlaceViewModel = ViewModelProvider(this).get(PlaceViewModel::class.java)
+        mPlaceViewModel.searchPlace(searchData).observe(this, Observer {place ->
+            if(place.isEmpty()) {
+                empty_view.setVisibility(View.VISIBLE)
+                empty_view_txt.setVisibility(View.VISIBLE)
+                Toast.makeText(this, "Search Place is not found", Toast.LENGTH_LONG).show()
+            } else {
+                adapter.setData(place)
+            }
         })
     }
 

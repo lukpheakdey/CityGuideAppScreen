@@ -18,4 +18,8 @@ class PlaceRepository(private val placeDao: PlaceDao) {
         return placeDao.readAllPlaceByCategory(categoryId)
     }
 
+    fun searchPlace(search: String) : LiveData<List<Place>> {
+        return placeDao.searchPlace(search)
+    }
+
 }

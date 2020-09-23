@@ -7,6 +7,7 @@ import android.text.TextUtils
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.lukpheakdey.cityguideapp.R
+import com.lukpheakdey.cityguideapp.UserDashboardActivity
 import com.lukpheakdey.cityguideapp.model.User
 import com.lukpheakdey.cityguideapp.viewmodel.UserViewModel
 import kotlinx.android.synthetic.main.activity_sign_up.*
@@ -38,6 +39,16 @@ class SignUpActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Please fill out all fields", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        signup_login_button.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        signup_back_button.setOnClickListener {
+            val intent = Intent(this, UserDashboardActivity::class.java)
+            startActivity(intent)
         }
 
     }

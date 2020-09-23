@@ -46,14 +46,10 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
             repository.deleteAllUsers()
         }
     }
-    
-    fun findUserByEmailPassword(
-        email: String,
-        password: String
-    ) {
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.findUserByEmailPassword(email, password)
-        }
+
+
+    fun findUserByEmailPassword(email: String, password: String) : LiveData<List<User>> {
+        return repository.findUserByEmailPassword(email, password)
     }
 
 

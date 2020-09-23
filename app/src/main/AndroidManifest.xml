@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lukpheakdey.cityguideapp">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -10,12 +11,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".webview.ECommerceActivity"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".script.ScriptDataActivity" />
+        <activity android:name=".webview.ECommerceActivity" />
         <activity android:name=".PlaceDetailActivity" />
         <activity
             android:name=".AllPlacesActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.Bridge" />
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity android:name="LoginSignup.SignUpActivity" />
         <activity android:name="LoginSignup.LoginActivity" />
         <activity
@@ -24,9 +28,7 @@
         <activity
             android:name=".AllCateogriesActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity
-            android:name=".UserDashboardActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity android:name=".UserDashboardActivity" />
         <activity
             android:name=".OnBoardingActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />

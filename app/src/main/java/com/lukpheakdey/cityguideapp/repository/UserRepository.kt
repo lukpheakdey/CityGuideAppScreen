@@ -24,8 +24,8 @@ class UserRepository(private val userDao: UserDao) {
         userDao.deleteAllUsers()
     }
 
-    fun findUserByEmailPassword(email: String, password: String) {
-        userDao.findUserByEmailPassword(email, password)
+    fun findUserByEmailPassword(email: String, password: String) :LiveData<List<User>> {
+        return userDao.findUserByEmailPassword(email, password)
     }
 
 }

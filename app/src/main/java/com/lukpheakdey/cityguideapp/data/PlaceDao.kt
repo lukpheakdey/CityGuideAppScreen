@@ -19,5 +19,8 @@ interface PlaceDao {
     @Query("SELECT * FROM place_table WHERE category_id =:categoryId")
     fun readAllPlaceByCategory(categoryId: Int) : LiveData<List<Place>>
 
+    @Query("SELECT * FROM place_table WHERE place_name LIKE '%' || :search || '%'")
+    fun searchPlace(search: String): LiveData<List<Place>>
+
 
 }

@@ -8,7 +8,7 @@
     android:background="@color/colorPrimary"
     android:padding="30dp"
     android:transitionName="transition_login"
-    tools:context="LoginSignup.LoginActivity">
+    tools:context=".LoginSignup.LoginActivity">
 
     <LinearLayout
         android:orientation="vertical"

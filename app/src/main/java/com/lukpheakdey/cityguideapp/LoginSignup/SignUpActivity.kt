@@ -1,4 +1,4 @@
-package LoginSignup
+package com.lukpheakdey.cityguideapp.LoginSignup
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

@@ -1,7 +1,7 @@
 package com.lukpheakdey.cityguideapp
 
-import LoginSignup.LoginActivity
-import LoginSignup.StartUpScreenActivity
+import com.lukpheakdey.cityguideapp.LoginSignup.LoginActivity
+import com.lukpheakdey.cityguideapp.LoginSignup.StartUpScreenActivity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color

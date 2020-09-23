@@ -20,10 +20,10 @@
         <activity
             android:name=".AllPlacesActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity android:name="LoginSignup.SignUpActivity" />
-        <activity android:name="LoginSignup.LoginActivity" />
+        <activity android:name=".LoginSignup.SignUpActivity" />
+        <activity android:name=".LoginSignup.LoginActivity" />
         <activity
-            android:name="LoginSignup.StartUpScreenActivity"
+            android:name=".LoginSignup.StartUpScreenActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".AllCateogriesActivity"

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".script.ScriptDataActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:id="@+id/back_pressed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="15dp"
+                android:src="@drawable/general_back_icon" />
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_create_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red_light"
+            android:text="Create Category I"/>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/btn_create_category1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/card2"
+            android:text="Create Category II"/>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/btn_create_category2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/card3"
+            android:text="Create Category III"/>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/btn_create_category3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/card4"
+            android:text="Create Category IV"/>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/btn_create_category4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/card1"
+            android:text="Create Category V"/>
+
+        <Button
+            android:layout_marginTop="50dp"
+            android:id="@+id/btn_create_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Create Place"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

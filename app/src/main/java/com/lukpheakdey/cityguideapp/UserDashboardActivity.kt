@@ -22,7 +22,6 @@ import com.google.android.material.navigation.NavigationView
 import com.lukpheakdey.cityguideapp.adapter.CategorieAdapter
 import com.lukpheakdey.cityguideapp.adapter.CategoriesCardIconAdapter
 import com.lukpheakdey.cityguideapp.adapter.FeatureAdapter
-import com.lukpheakdey.cityguideapp.model.Category
 import com.lukpheakdey.cityguideapp.model.Feature
 import com.lukpheakdey.cityguideapp.script.ScriptDataActivity
 import com.lukpheakdey.cityguideapp.viewmodel.CategoriesViewModel
@@ -32,9 +31,6 @@ import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_user_dashboard.*
 
 class UserDashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
-
-    lateinit var categorylist: ArrayList<Category>
-    lateinit var featurelist: ArrayList<Feature>
 
     private lateinit var mCategoriesViewModel: CategoriesViewModel
     private lateinit var mPlaceViewModel: PlaceViewModel
@@ -52,6 +48,7 @@ class UserDashboardActivity : AppCompatActivity(), NavigationView.OnNavigationIt
         val navLogin = menu.findItem(R.id.nav_login)
         val navProfile = menu.findItem(R.id.nav_profile)
 
+        // check with session
         if(isLogin()){
             navLogin.setVisible(false)
             navLogout.setVisible(true)
@@ -63,11 +60,6 @@ class UserDashboardActivity : AppCompatActivity(), NavigationView.OnNavigationIt
         }
 
         naviagtionDrawer()
-
-        categorylist = ArrayList()
-        featurelist = ArrayList()
-        addFeatures()
-        addCategory()
 
         categoriesRecycler()
         featuredRecycler()
@@ -92,27 +84,6 @@ class UserDashboardActivity : AppCompatActivity(), NavigationView.OnNavigationIt
     }
 
     fun categoriesRecycler(){
-        /*
-        val list: ArrayList<String> = ArrayList()
-        for (i in 0..5) {
-            list.add("Title : " + (i +1))
-        }
-        val manage = GridLayoutManager(this, 1, GridLayoutManager.HORIZONTAL, false)
-        categories_recycler.layoutManager = manage
-
-        val adapter = CategorieAdapter(this, list)
-        categories_recycler.adapter = adapter */
-
-        /*  Previous work category recyclerview */
-        /*
-        categories_recycler.layoutManager = LinearLayoutManager(
-            this,
-            LinearLayoutManager.HORIZONTAL,
-            false
-        )
-        categories_recycler.adapter = CategorieAdapter(categorylist, this)
-         */
-
         //RecyclerView
         val adapter = CategorieAdapter()
         categories_recycler.adapter = adapter
@@ -127,15 +98,6 @@ class UserDashboardActivity : AppCompatActivity(), NavigationView.OnNavigationIt
     }
 
     fun featuredRecycler() {
-        /* Previous working one */
-        /*
-        featured_recycler.layoutManager = LinearLayoutManager(
-            this,
-            LinearLayoutManager.HORIZONTAL,
-            false
-        )
-        featured_recycler.adapter = FeatureAdapter(featurelist, this)*/
-
         //RecyclerView
         val adapter = FeatureAdapter()
         featured_recycler.adapter = adapter
@@ -143,22 +105,10 @@ class UserDashboardActivity : AppCompatActivity(), NavigationView.OnNavigationIt
 
         // PlaceViewModel
         mPlaceViewModel = ViewModelProvider(this).get(PlaceViewModel::class.java)
-        mPlaceViewModel.readAllDatPlaceWithFeature.observe(this, Observer { place ->
+        mPlaceViewModel.readAllDataPlaceWithFeature.observe(this, Observer { place ->
             adapter.setData(place)
         })
 
-    }
-
-    fun addFeatures() {
-        featurelist.add(Feature("Mcdonald's", R.drawable.mcdonald_img))
-        featurelist.add(Feature("Walmart", R.drawable.city_1))
-        featurelist.add(Feature("Edenrobe", R.drawable.city_2))
-    }
-
-    fun addCategory() {
-        categorylist.add(Category("Education", R.drawable.school_image))
-        categorylist.add(Category("HOSPITAL", R.drawable.hospital_image))
-        categorylist.add(Category("Restaurant", R.drawable.restaurant_image))
     }
 
     fun naviagtionDrawer() {
@@ -241,10 +191,6 @@ class UserDashboardActivity : AppCompatActivity(), NavigationView.OnNavigationIt
                 startActivity(i)
             }
             R.id.nav_logout -> {
-//                val navigationView= this.findViewById<NavigationView>(R.id.navigation_view)
-//                val menu = navigationView.menu
-//                val navLogout = menu.findItem(R.id.nav_logout)
-//                navLogout.setVisible(false)
                 var i = Intent(applicationContext, StartUpScreenActivity::class.java)
                 startActivity(i)
             }
@@ -273,18 +219,6 @@ class UserDashboardActivity : AppCompatActivity(), NavigationView.OnNavigationIt
 
     //Normal Functions
     fun callStartupScreens(view: View?) {
-//        val sessionManager = SessionManager(this@UserDashboard, SessionManager.SESSION_USERSESSION)
-//        if (sessionManager.checkLogin()) startActivity(
-//            Intent(
-//                applicationContext,
-//                RetailerDashboard::class.java
-//            )
-//        ) else startActivity(
-//            Intent(
-//                applicationContext,
-//                RetailerStartUpScreen::class.java
-//            )
-//        )
         var intent = Intent(this, StartUpScreenActivity::class.java)
         startActivity(intent)
     }

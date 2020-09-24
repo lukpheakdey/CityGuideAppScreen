@@ -25,64 +25,6 @@
 
     </RelativeLayout>
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginRight="10dp"-->
-<!--        android:layout_marginLeft="10dp"-->
-<!--        android:orientation="vertical">-->
-
-<!--        <RelativeLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="?actionBarSize">-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/back_pressed"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_centerVertical="true"-->
-<!--                android:padding="15dp"-->
-<!--                android:src="@drawable/general_back_icon" />-->
-
-<!--            <ImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignParentRight="true"-->
-<!--                android:layout_centerVertical="true"-->
-<!--                android:padding="15dp"-->
-<!--                android:src="@drawable/general_search_icon" />-->
-
-<!--        </RelativeLayout>-->
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="ALL PLACES TO VISIT"-->
-<!--            android:textSize="20sp"-->
-<!--            android:fontFamily="@font/brandon_grotesque_black"-->
-<!--            android:padding="10dp"-->
-<!--            android:textAllCaps="true"/>-->
-
-<!--    </LinearLayout>-->
-
-<!--    <androidx.appcompat.widget.SearchView-->
-<!--        android:id="@+id/action_search"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="@color/colorPrimary"-->
-<!--        android:textCursorDrawable="@null"-->
-<!--        app:iconifiedByDefault="false"-->
-<!--        app:queryBackground="@null" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/empty_view"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:visibility="gone"-->
-<!--        android:textSize="24dp"-->
-<!--        android:textColor="@color/red_light"-->
-<!--        android:text="Data is not found" />-->
-
     <TextView
         android:id="@+id/empty_view_txt"
         android:layout_width="match_parent"
@@ -101,28 +43,23 @@
         android:visibility="gone"
         android:src="@drawable/not_found" />
 
-
     <LinearLayout
       android:orientation="vertical"
       android:layout_marginLeft="10dp"
       android:layout_marginRight="10dp"
       android:layout_width="match_parent"
       android:layout_height="wrap_content">
+          <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent">
 
-              <RelativeLayout
-                  android:layout_width="wrap_content"
-                  android:layout_height="match_parent">
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/all_places_recycler"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/home_background"/>
 
-                  <androidx.recyclerview.widget.RecyclerView
-                      android:id="@+id/all_places_recycler"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:background="@color/home_background"/>
-
-              </RelativeLayout>
+          </RelativeLayout>
     </LinearLayout>
-
-
-
 
 </LinearLayout>

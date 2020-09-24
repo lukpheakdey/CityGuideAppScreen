@@ -14,7 +14,7 @@ class PlaceViewModel(application: Application): AndroidViewModel(application) {
 
     val readAllDataPlace: LiveData<List<Place>>
 
-    val readAllDatPlaceWithFeature: LiveData<List<Place>>
+    val readAllDataPlaceWithFeature: LiveData<List<Place>>
 
     lateinit var readAllPlaceByCategory: LiveData<List<Place>>
 
@@ -25,7 +25,7 @@ class PlaceViewModel(application: Application): AndroidViewModel(application) {
 
         repository = PlaceRepository(placeDao)
         readAllDataPlace = repository.readAllDataPlace
-        readAllDatPlaceWithFeature = repository.readAllDatPlaceWithFeature
+        readAllDataPlaceWithFeature = repository.readAllDatPlaceWithFeature
     }
 
     fun addPlace(place: Place) {

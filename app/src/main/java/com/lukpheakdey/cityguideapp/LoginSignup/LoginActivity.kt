@@ -19,7 +19,6 @@ import com.lukpheakdey.cityguideapp.viewmodel.PlaceViewModel
 import com.lukpheakdey.cityguideapp.viewmodel.UserViewModel
 import kotlinx.android.synthetic.main.activity_login.*
 
-
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var mUserViewModel: UserViewModel
@@ -47,9 +46,8 @@ class LoginActivity : AppCompatActivity() {
                        Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show()
                    } else {
                        sharePreferenceEmailPassword(email, password)
+                       // call user dashboard intent
                        userDashboard()
-//                       var intent = Intent(this, UserDashboardActivity::class.java)
-//                       startActivity(intent)
                        Toast.makeText(this, "Sucessfully login", Toast.LENGTH_SHORT).show()
                    }
                 })

@@ -135,45 +135,6 @@
 
                 </RelativeLayout>
 
-<!--                <RelativeLayout-->
-<!--                    android:padding="20dp"-->
-<!--                    android:orientation="horizontal"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content">-->
-
-<!--                    <com.google.android.material.textfield.TextInputLayout-->
-<!--                        android:id="@+id/et_search"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-<!--                        app:hintTextColor="@color/black"-->
-<!--                        app:boxStrokeColor="@color/black"-->
-<!--                        app:boxStrokeWidthFocused="2dp"-->
-<!--                        app:startIconTint="@color/black"-->
-<!--                        app:endIconMode="clear_text"-->
-<!--                        app:endIconTint="@color/black"-->
-<!--                        app:startIconDrawable="@drawable/icon_search"-->
-<!--                        android:hint="@string/search">-->
-
-<!--                        <com.google.android.material.textfield.TextInputEditText-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:inputType="text"/>-->
-
-<!--                        <Button-->
-<!--                            android:id="@+id/btn_login"-->
-<!--                            android:layout_width="109dp"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginTop="20dp"-->
-<!--                            android:background="@color/black_light"-->
-<!--                            android:text="@string/login"-->
-<!--                            android:textColor="@color/white" />-->
-
-<!--                    </com.google.android.material.textfield.TextInputLayout>-->
-
-<!--                </RelativeLayout>-->
-
-
                 <!-- Category -->
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -187,133 +148,6 @@
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
-
-
-
-                <!-- Card Categorie and Icon -->
-<!--                <LinearLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:orientation="horizontal">-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:orientation="vertical">-->
-
-<!--                        <RelativeLayout-->
-<!--                            android:layout_width="60dp"-->
-<!--                            android:layout_height="60dp"-->
-<!--                            android:layout_margin="10dp"-->
-<!--                            android:background="@drawable/card_1"-->
-<!--                            android:elevation="8dp">-->
-
-<!--                            <ImageView-->
-<!--                                android:layout_width="30dp"-->
-<!--                                android:layout_height="30dp"-->
-<!--                                android:layout_centerInParent="true"-->
-<!--                                android:src="@drawable/restaurant_icon" />-->
-
-<!--                        </RelativeLayout>-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:gravity="center_horizontal"-->
-<!--                            android:text="@string/restaurants"-->
-<!--                            android:textAlignment="center" />-->
-
-<!--                    </LinearLayout>-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:orientation="vertical">-->
-
-<!--                        <RelativeLayout-->
-<!--                            android:layout_width="60dp"-->
-<!--                            android:layout_height="60dp"-->
-<!--                            android:layout_margin="10dp"-->
-<!--                            android:background="@drawable/card_2"-->
-<!--                            android:elevation="8dp">-->
-
-<!--                            <ImageView-->
-<!--                                android:layout_width="30dp"-->
-<!--                                android:layout_height="30dp"-->
-<!--                                android:layout_centerInParent="true"-->
-<!--                                android:src="@drawable/bank_icon" />-->
-
-<!--                        </RelativeLayout>-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:gravity="center_horizontal"-->
-<!--                            android:text="@string/hotels"-->
-<!--                            android:textAlignment="center" />-->
-
-<!--                    </LinearLayout>-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:orientation="vertical">-->
-
-<!--                        <RelativeLayout-->
-<!--                            android:layout_width="60dp"-->
-<!--                            android:layout_height="60dp"-->
-<!--                            android:layout_margin="10dp"-->
-<!--                            android:background="@drawable/card_3"-->
-<!--                            android:elevation="8dp">-->
-
-<!--                            <ImageView-->
-<!--                                android:layout_width="30dp"-->
-<!--                                android:layout_height="30dp"-->
-<!--                                android:layout_centerInParent="true"-->
-<!--                                android:src="@drawable/school_icon" />-->
-
-<!--                        </RelativeLayout>-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:gravity="center_horizontal"-->
-<!--                            android:text="Education"-->
-<!--                            android:textAlignment="center" />-->
-
-<!--                    </LinearLayout>-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:orientation="vertical">-->
-
-<!--                        <RelativeLayout-->
-<!--                            android:layout_width="60dp"-->
-<!--                            android:layout_height="60dp"-->
-<!--                            android:layout_margin="10dp"-->
-<!--                            android:background="@drawable/card_4"-->
-<!--                            android:elevation="8dp">-->
-
-<!--                            <ImageView-->
-<!--                                android:layout_width="30dp"-->
-<!--                                android:layout_height="30dp"-->
-<!--                                android:layout_centerInParent="true"-->
-<!--                                android:src="@drawable/shop_icon" />-->
-
-<!--                        </RelativeLayout>-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:gravity="center_horizontal"-->
-<!--                            android:text="@string/shops"-->
-<!--                            android:textAlignment="center" />-->
-
-<!--                    </LinearLayout>-->
-
-<!--                </LinearLayout>-->
 
                 <!-- All featured location -->
                 <RelativeLayout
@@ -364,47 +198,6 @@
 
                 </RelativeLayout>
 
-                <!-- Most Viewed -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:orientation="vertical"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:fontFamily="@font/brandon_grotesque_black"
-                            android:text="@string/most_viewed_locations"
-                            android:textAllCaps="true"
-                            android:textColor="@color/colorAccent"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginRight="15dp"
-                            android:text="@string/view_all" />
-
-
-                    </RelativeLayout>
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/most_viewed_recycler"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-
                 <!-- Category -->
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -427,12 +220,12 @@
                             android:textColor="@color/colorAccent"
                             android:textSize="20sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:text="@string/view_all" />
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentRight="true"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:text="@string/view_all" />-->
 
 
                     </RelativeLayout>

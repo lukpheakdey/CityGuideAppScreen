@@ -21,7 +21,6 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        //mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
         signup_btn.setOnClickListener {

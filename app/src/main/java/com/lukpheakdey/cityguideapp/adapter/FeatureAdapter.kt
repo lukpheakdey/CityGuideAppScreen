@@ -14,38 +14,8 @@ import com.lukpheakdey.cityguideapp.model.Place
 import kotlinx.android.synthetic.main.all_places_card_design.view.*
 import kotlinx.android.synthetic.main.featured_card_design.view.*
 
-
-/*
-class FeatureAdapter(var items: ArrayList<Feature>, val mContext: Context): RecyclerView.Adapter<FeatureViewHolder>(){
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeatureViewHolder {
-        lateinit var featureViewHolder : FeatureViewHolder
-        featureViewHolder = FeatureViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.featured_card_design, parent, false))
-        return featureViewHolder
-    }
-
-    override fun onBindViewHolder(holder: FeatureViewHolder, position: Int) {
-        holder.initialize(items.get(position))
-    }
-
-    override fun getItemCount(): Int {
-        return items.size
-    }
-}
-
-class FeatureViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-
-    var featureTitle = itemView.featured_title
-    var featureImage = itemView.featured_image
-
-    fun initialize(items: Feature) {
-        featureTitle.text = items.featured_title
-        featureImage.setImageResource(items.featured_image)
-    }
-
-} */
-
 class FeatureAdapter: RecyclerView.Adapter<FeatureAdapter.MyViewHolder>() {
+
     lateinit var context: Context
 
     private var placeList = emptyList<Place>()

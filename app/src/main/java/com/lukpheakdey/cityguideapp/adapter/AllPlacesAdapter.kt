@@ -15,9 +15,6 @@ import kotlinx.android.synthetic.main.all_places_card_design.view.*
 import java.util.*
 import kotlin.collections.ArrayList
 
-//import kotlinx.android.synthetic.main.all_places_card_design.view.*
-
-
 class AllPlacesAdapter: RecyclerView.Adapter<AllPlacesAdapter.MyViewHolder>() {
 
     lateinit var context: Context
@@ -72,6 +69,5 @@ class AllPlacesAdapter: RecyclerView.Adapter<AllPlacesAdapter.MyViewHolder>() {
         this.placeList = place
         notifyDataSetChanged()
     }
-
 
 }

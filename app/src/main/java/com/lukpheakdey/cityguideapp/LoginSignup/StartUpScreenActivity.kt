@@ -28,7 +28,6 @@ class StartUpScreenActivity : AppCompatActivity() {
             login_out_btn?.setVisibility(View.GONE)
         }
 
-
         login_out_btn.setOnClickListener {
             logout()
             var intent = Intent(this, UserDashboardActivity::class.java)

@@ -10,7 +10,7 @@ import androidx.viewpager.widget.PagerAdapter
 import com.lukpheakdey.cityguideapp.R
 import com.lukpheakdey.cityguideapp.model.OnBoardingData
 
-class OnBoardingViewPagerAdapter(private var context:Context, private var onBoardingDataList: List<OnBoardingData>): PagerAdapter(){
+class OnBoardingViewPagerAdapter(private var context:Context, private var onBoardingDataList: List<OnBoardingData>): PagerAdapter() {
     override fun getCount(): Int {
         return onBoardingDataList.size
     }

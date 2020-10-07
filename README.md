@@ -10,3 +10,6 @@ City Guide App using Android/Kotlin to development. This App guide the informati
 
 # Provide Option Login/Signup
 ![Project_Login_Signup](https://user-images.githubusercontent.com/10406702/95229860-182a9280-07cf-11eb-9866-cba1094becf4.png)
+
+# Welcome - All Categories - Location Detail - E-commerice(WebView)
+![Welcome](https://user-images.githubusercontent.com/10406702/95273714-be978780-0811-11eb-958c-72877c520438.png)
